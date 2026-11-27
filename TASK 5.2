@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int next_token(int *counter)
+{
+    return ++(*counter);
+}
+
+int main(void)
+{
+    int veg_counter = 1000;
+    int nonveg_counter = 1000;
+
+    int v1 = next_token(&veg_counter);
+    int v2 = next_token(&veg_counter);
+    int v3 = next_token(&veg_counter);
+
+    int n1 = next_token(&nonveg_counter);
+    int n2 = next_token(&nonveg_counter);
+    int n3 = next_token(&nonveg_counter);
+
+    printf("Veg tokens: %d %d %d\n", v1, v2, v3);
+
+    printf("Non-veg tokens: %d %d %d\n", n1, n2, n3);
+
+    return 0;
+}
