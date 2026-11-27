@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+union sensorValue
+{
+    float celsius;
+    int percent;
+};
+
+int main()
+{
+    union sensorValue data;
+
+    data.celsius = 31.5f;
+
+    printf("Temperature = %.1f\n", data.celsius);
+
+    printf("Humidity = %d\n", data.percent);
+
+    return 0;
+}
