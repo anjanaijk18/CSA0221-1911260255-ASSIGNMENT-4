@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int next_token(void)
+{
+    int token = 1000;
+
+    return ++token;
+}
+
+int main(void)
+{
+    printf("Automatic: %d %d %d\n",
+           next_token(),
+           next_token(),
+           next_token());
+
+    return 0;
+}
